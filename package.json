@@ -1,0 +1,45 @@
+{
+	"name": "@growthops/ext-ramda",
+	"version": "0.0.0",
+	"description": "Ramda library for the GO Digital modern stack",
+	"main": "./lib/index.js",
+	"license": "MIT",
+	"exports": {
+		".": "./lib/index.js"
+	},
+	"scripts": {
+		"build": "npx babel src --out-dir lib",
+		"test": "xo",
+		"release": "standard-version",
+		"cz": "cz"
+	},
+	"xo": {
+		"envs": [
+			"browser",
+			"node"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/growthops-digital/ext-ramda.git"
+	},
+	"peerDependencies": {
+		"ramda": "^0.27.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.14.3",
+		"@babel/core": "^7.14.3",
+		"@babel/preset-env": "^7.14.2",
+		"ramda": "^0.27.1",
+		"commitizen": "^4.2.4",
+		"cz-conventional-changelog": "^3.3.0",
+		"standard-version": "^9.3.0",
+		"webpack": "^5.37.1",
+		"xo": "^0.39"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
+}
