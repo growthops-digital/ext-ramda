@@ -26,3 +26,5 @@ jobs:
           git_name: Tristan (CI)
           git_email: tristan.strathearn@growthops.com.au
           xo: true
+      - name: Run tests
+        run: npm run test

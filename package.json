@@ -8,8 +8,8 @@
 		".": "./lib/index.js"
 	},
 	"scripts": {
-		"build": "npx babel src --out-dir lib",
-		"test": "xo && jest",
+		"build": "npx babel src --out-dir lib --ignore '**/*.test.js'",
+		"test": "jest",
 		"release": "standard-version",
 		"cz": "cz"
 	},

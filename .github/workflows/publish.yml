@@ -23,6 +23,8 @@ jobs:
         uses: wearerequired/lint-action@v1
         with:
           xo: true
+      - name: Run tests
+        run: npm run test
       - name: Build package
         run: npm run build
       - name: Publish package
