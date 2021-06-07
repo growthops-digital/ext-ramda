@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/growthops-digital/ext-ramda/compare/v1.0.0...v1.1.0) (2021-06-07)
+
+
+### Features
+
+* add reform function ([a77d0dd](https://github.com/growthops-digital/ext-ramda/commit/a77d0dd5a7e05661a271a42617f3ae02b41f4cb0))
+
 ## [1.0.0](https://github.com/growthops-digital/ext-ramda/compare/v0.0.3...v1.0.0) (2021-05-25)
 
 ### [0.0.3](https://github.com/growthops-digital/ext-ramda/compare/v0.0.2...v0.0.3) (2021-05-25)
