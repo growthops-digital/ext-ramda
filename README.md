@@ -2,15 +2,15 @@
 
 A collection of useful extensions built around the [Ramda](https://ramdajs.com/) library.
 
-## Methods
+## Functions
 
 ### `notEquals(a, b)`
 
-Returns `true` if `a` is not equal to `b`, `false` otherwise.
+Returns `true` if `a` is not equal to `b` — otherwise returns `false`.
 
 ### `reform(structure, data)`
 
-Create a new object matching the provided `structure` where the value for each of the keys is derived from the provided path into `data`. The path is provided using the dot notation. Note: the path only supports nested objects.
+Create a new object matching the provided `structure` where the value for each of the keys is derived from the provided path into `data`. The path can be provided using the dot notation.
 
 **Example**
 ```js
