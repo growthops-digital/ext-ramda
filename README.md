@@ -1,5 +1,7 @@
 # GrowthOps Ext Ramda
 
+[![codecov](https://codecov.io/gh/growthops-digital/ext-ramda/branch/main/graph/badge.svg?token=QYEO8FK8JA)](https://codecov.io/gh/growthops-digital/ext-ramda)
+
 A collection of useful extensions built around the [Ramda](https://ramdajs.com/) library.
 
 ## Functions
