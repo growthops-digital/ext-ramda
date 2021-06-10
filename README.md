@@ -10,6 +10,10 @@ A collection of useful extensions built around the [Ramda](https://ramdajs.com/)
 
 Returns `true` if `a` is not equal to `b` — otherwise returns `false`.
 
+### `notEmpty(a)`
+
+Returns `true` if `a` is not that type's empty value — otherwise returns `false`.
+
 ### `reform(structure, data)`
 
 Create a new object matching the provided `structure` where the value for each of the keys is derived from the provided path into `data`. The path can be provided using the dot notation.
