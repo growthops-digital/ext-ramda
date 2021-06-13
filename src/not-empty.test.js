@@ -22,8 +22,8 @@ test('string containing characters is not empty', () => {
 });
 
 test('blank string returns as empty', () => {
-	const input = 'Hello world';
+	const input = '';
 	const result = notEmpty(input);
 
-	expect(result).toBe(true);
+	expect(result).toBe(false);
 });
