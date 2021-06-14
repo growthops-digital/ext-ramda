@@ -6,11 +6,11 @@ test('reforms simple object', () => {
 		baz: 'qux'
 	};
 
-	const reformedObject = reform({
+	const result = reform({
 		foo: 'baz'
 	}, inputObject);
 
-	expect(reformedObject).toEqual({
+	expect(result).toEqual({
 		foo: 'qux'
 	});
 });
@@ -25,7 +25,9 @@ test('reforms simple object — curried', () => {
 		foo: 'baz'
 	});
 
-	expect(reformObject(inputObject)).toEqual({
+	const result = reformObject(inputObject);
+
+	expect(result).toEqual({
 		foo: 'qux'
 	});
 });
@@ -39,12 +41,12 @@ test('reforms complex object', () => {
 		}
 	};
 
-	const reformedObject = reform({
+	const result = reform({
 		foo: 'foo',
 		bar: 'baz.corge'
 	}, inputObject);
 
-	expect(reformedObject).toEqual({
+	expect(result).toEqual({
 		foo: 'bar',
 		bar: 'grault'
 	});
