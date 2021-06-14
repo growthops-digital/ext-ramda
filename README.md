@@ -14,6 +14,20 @@ Returns `true` if `a` is not equal to `b` — otherwise returns `false`.
 
 Returns `true` if `a` is not that type's empty value — otherwise returns `false`.
 
+### `ternary(test, fallback, subject)`
+
+Returns `subject` if the result of calling `test` with `subject` as its first and only parameter returns `true` — otherwise `fallback` is returned.
+
+**Example**
+```js
+import {ternary, notEmpty} from '@growthops/ext-ramda';
+
+const defaultToFoo = ternary(notEmpty, 'foo');
+
+defaultToFoo([]); // 'foo'
+defaultToFoo(['bar', 'baz']); // ['bar', 'baz']
+```
+
 ### `reform(structure, data)`
 
 Create a new object matching the provided `structure` where the value for each of the keys is derived from the provided path into `data`. The path can be provided using the dot notation.
