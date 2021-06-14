@@ -14,6 +14,10 @@ Returns `true` if `a` is not equal to `b` — otherwise returns `false`.
 
 Returns `true` if `a` is not that type's empty value — otherwise returns `false`.
 
+### `notNil(a)`
+
+Returns `true` if `a` is not nil (`null` or `undefined`) — otherwise returns `false`.
+
 ### `ternary(test, fallback, subject)`
 
 Returns `subject` if the result of calling `test` with `subject` as its first and only parameter returns `true` — otherwise `fallback` is returned.
