@@ -18,7 +18,7 @@ Returns `true` if `a` is not that type's empty value — otherwise returns `fals
 
 Returns `true` if `a` is not nil (`null` or `undefined`) — otherwise returns `false`.
 
-### `populated(a)`
+### `isPopulated(a)`
 
 Returns `true` if `a` is not nil (`null` or `undefined`) and is not that type's empty value — otherwise returns `false`.
 
