@@ -18,6 +18,10 @@ Returns `true` if `a` is not that type's empty value — otherwise returns `fals
 
 Returns `true` if `a` is not nil (`null` or `undefined`) — otherwise returns `false`.
 
+### `isPopulated(a)`
+
+Returns `true` if `a` is not nil (`null` or `undefined`) and is not that type's empty value — otherwise returns `false`.
+
 ### `ternary(test, fallback, subject)`
 
 Returns `subject` if the result of calling `test` with `subject` as its first and only parameter returns `true` — otherwise `fallback` is returned.
