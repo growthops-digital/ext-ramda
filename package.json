@@ -11,6 +11,7 @@
 		"build": "npx babel src --out-dir lib --ignore '**/*.test.js'",
 		"test": "jest",
 		"release": "standard-version",
+		"lint": "xo",
 		"cz": "cz"
 	},
 	"xo": {
@@ -18,7 +19,11 @@
 			"browser",
 			"node",
 			"jest"
-		]
+		],
+		"rules": {
+			"unicorn/no-array-callback-reference": 0,
+			"newline-before-return": 2
+		}
 	},
 	"repository": {
 		"type": "git",
@@ -33,6 +38,7 @@
 		"@babel/preset-env": "^7.14.5",
 		"commitizen": "^4.2.4",
 		"cz-conventional-changelog": "^3.3.0",
+		"eslint-config-xo": "^0.37.0",
 		"jest": "^27.0.4",
 		"ramda": "^0.27.1",
 		"standard-version": "^9.3.0",
