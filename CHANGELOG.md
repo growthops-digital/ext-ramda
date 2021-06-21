@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/growthops-digital/ext-ramda/compare/v1.2.1...v1.3.0) (2021-06-21)
+
+
+### Features
+
+* add support for complex reform structures and function processors ([78b1d8b](https://github.com/growthops-digital/ext-ramda/commit/78b1d8b52d6a2aa8deaece9e34c508bcbacac0be))
+
 ### [1.2.1](https://github.com/growthops-digital/ext-ramda/compare/v1.2.0...v1.2.1) (2021-06-15)
 
 ## [1.2.0](https://github.com/growthops-digital/ext-ramda/compare/v1.1.2...v1.2.0) (2021-06-15)
