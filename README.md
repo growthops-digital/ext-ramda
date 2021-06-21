@@ -38,9 +38,9 @@ defaultToFoo(['bar', 'baz']); // ['bar', 'baz']
 
 ### `reform(structure, data)`
 
-Create a new object matching the provided `structure` where the value for each of the keys is derived from the provided path into `data`. The path can be provided using the dot notation.
+Create a new object matching the provided `structure` where the value for each of the keys is derived from the provided path into `data`. The path can be provided using the dot notation. If a function is passed instead of a path, the result of executing the function with the `data` object supplied as the first and only parameter will be used instead.
 
-**Example**
+**Example 1**
 ```js
 import {reform} from '@growthops/ext-ramda';
 
@@ -64,5 +64,24 @@ reform({
 // 	id: 0,
 // 	src: 'https://example.com/image.jpg',
 // 	published: '01/01/2021'
+// }
+```
+
+**Example 2**
+```js
+import {pipe, prop, sum} from 'ramda';
+import {reform} from '@growthops/ext-ramda';
+
+const inputData = {
+	numbers: [1, 2, 3]
+};
+
+reform({
+	total: pipe(prop('numbers'), sum)
+}, inputData);
+
+// Returns:
+// {
+// 	total: 6
 // }
 ```
