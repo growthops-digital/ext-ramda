@@ -22,6 +22,24 @@ Returns `true` if `a` is not nil (`null` or `undefined`) — otherwise returns `
 
 Returns `true` if `a` is not nil (`null` or `undefined`) and is not that type's empty value — otherwise returns `false`.
 
+### `collapse(string)`
+
+Takes a string consisting of newlines, tabs, and/or multiple spaces, and returns a single collapsed string with only one space between each "word".
+
+**Example**
+```js
+import {collapse} from '@growthops/ext-ramda';
+
+collapse(`
+	foo
+		bar
+
+	     baz
+`);
+
+// Returns: 'foo bar baz'
+```
+
 ### `ternary(test, fallback, subject)`
 
 Returns `subject` if the result of calling `test` with `subject` as its first and only parameter returns `true` — otherwise `fallback` is returned.
