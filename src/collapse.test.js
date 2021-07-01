@@ -1,6 +1,6 @@
 import collapse from './collapse.js';
 
-test('standard multi line string collapses to single line string', () => {
+test('standard multi line string collapses into single line string', () => {
 	const input = `
 		foo
 		bar
@@ -12,7 +12,7 @@ test('standard multi line string collapses to single line string', () => {
 	expect(result).toBe('foo bar baz');
 });
 
-test('awful multi line string collapses to single line string', () => {
+test('awful multi line string collapses into single line string', () => {
 	const input = `
 		foo
 					bar
