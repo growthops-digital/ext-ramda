@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/growthops-digital/ext-ramda/compare/v1.3.1...v1.4.0) (2021-07-01)
+
+
+### Features
+
+* add collapse function ([7dd5bd7](https://github.com/growthops-digital/ext-ramda/commit/7dd5bd764d42c710c11aae1e986ba90f3ce52706))
+
 ### [1.3.1](https://github.com/growthops-digital/ext-ramda/compare/v1.3.0...v1.3.1) (2021-06-21)
 
 ## [1.3.0](https://github.com/growthops-digital/ext-ramda/compare/v1.2.1...v1.3.0) (2021-06-21)
