@@ -24,9 +24,9 @@ Returns `true` if `a` is not nil (`null` or `undefined`) and is not that type's 
 
 ### `collapse(string)`
 
-Takes a string consisting of newlines, tabs, and/or multiple spaces, and returns a single collapsed string with only one space between each "word".
+Takes a string consisting of newlines, tabs, and/or multiple spaces, and returns a single collapsed string with only one space between each "word". This function also accepts arrays of such strings and will automatically join and format all entries, while ignoring any non-string entries.
 
-**Example**
+**Example 1**
 ```js
 import {collapse} from '@growthops/ext-ramda';
 
@@ -36,6 +36,21 @@ collapse(`
 
 	     baz
 `);
+
+// Returns: 'foo bar baz'
+```
+
+**Example 2**
+```js
+import {collapse} from '@growthops/ext-ramda';
+
+collapse([
+	'foo',
+	`
+		bar
+		baz
+	`,
+]);
 
 // Returns: 'foo bar baz'
 ```
