@@ -12,7 +12,7 @@ test('standard multi line string collapses into single line string', () => {
 	expect(result).toBe('foo bar baz');
 });
 
-test('awful multi line string collapses into single line string', () => {
+test('multi line string containing extra whitespace and tabs collapses into single line string', () => {
 	const input = `
 		foo
 					bar
@@ -20,7 +20,7 @@ test('awful multi line string collapses into single line string', () => {
 
 
 
-					     qux
+					       qux
 	`;
 
 	const result = collapse(input);
@@ -52,7 +52,7 @@ test('non-string entries in an array are ignored', () => {
 	expect(result).toBe('foo bar');
 });
 
-test('array of containing multi-line strings are collapsed', () => {
+test('multi-line strings in an array are collapsed idependently before overall collapse', () => {
 	const input = [
 		`
 			foo
@@ -80,7 +80,7 @@ test('non-string entries in an array are ignored — nested array variant', () =
 	expect(result).toBe('baz');
 });
 
-test('empty array collapses to empty string', () => {
+test('empty array collapses into an empty string', () => {
 	const input = [];
 
 	const result = collapse(input);
@@ -88,7 +88,7 @@ test('empty array collapses to empty string', () => {
 	expect(result).toBe('');
 });
 
-test('non-string or non-array values collapse to an empty string', () => {
+test('non-string or non-array values collapse into an empty string', () => {
 	const input = null;
 
 	const result = collapse(input);
