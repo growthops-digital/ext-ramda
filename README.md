@@ -22,9 +22,9 @@ Returns `true` if `a` is not nil (`null` or `undefined`) — otherwise returns `
 
 Returns `true` if `a` is not nil (`null` or `undefined`) and is not that type's empty value — otherwise returns `false`.
 
-### `collapse(string)`
+### `collapse(string | [string])`
 
-Takes a string consisting of newlines, tabs, and/or multiple spaces, and returns a single collapsed string with only one space between each "word". This function also accepts arrays of such strings and will automatically join and format all entries, while ignoring any non-string entries.
+Takes a string consisting of newlines, tabs, and/or multiple spaces, and returns a single collapsed string with only one space between each "word". This function also accepts an array of strings and will automatically join and format all entries, while ignoring any non-string entries.
 
 **Example 1**
 ```js
