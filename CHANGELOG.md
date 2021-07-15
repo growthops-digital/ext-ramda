@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/growthops-digital/ext-ramda/compare/v1.5.1...v1.6.0) (2021-07-15)
+
+
+### Features
+
+* add mapProp function ([2627c5c](https://github.com/growthops-digital/ext-ramda/commit/2627c5c9b0d72b6ac31a54d58dd8f0e52f34f1a3))
+
 ### [1.5.1](https://github.com/growthops-digital/ext-ramda/compare/v1.5.0...v1.5.1) (2021-07-11)
 
 ## [1.5.0](https://github.com/growthops-digital/ext-ramda/compare/v1.4.0...v1.5.0) (2021-07-08)
