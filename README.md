@@ -118,3 +118,41 @@ reform({
 // 	total: 6
 // }
 ```
+
+### `mapProp(prop, fallback, branches, data)`
+
+Map over a list of objects, choosing a specific transforming function based on whether the object contains a `prop` that matches one of the keys supplied in the `branches` object. If no match is found, the `fallback` transformer is used.
+
+**Example**
+
+```js
+import {mapProp} from '@growthops/ext-ramda';
+import {always} from 'ramda';
+
+const blocks = [
+	{type: 'text', content: 'Foo'},
+	{type: 'image', url: 'https://example.com/foo.jpg', alt: 'bar'},
+	{type: 'unknown'},
+];
+
+const renderTextBlock = ({content}) => <p>{content}</p>;
+const renderImageBlock = ({url, alt}) => <img src={url} alt={alt}/>;
+
+const renderBlocks = mapProp('type', always(null), {
+	text: renderTextBlock,
+	image: renderImageBlock,
+});
+
+const Page = () => (
+	<main>
+		{renderBlocks(blocks)}
+	</main>
+);
+
+// Rendered:
+// <main>
+// 	<p>Foo</p>
+// 	<img src="https://example.com/foo.jpg" alt="bar"/>
+//	// <-- The unknown block is not rendered here as the fallback transformer returned null.
+// </main>
+```
