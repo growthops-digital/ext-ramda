@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/growthops-digital/ext-ramda/compare/v1.6.0...v2.0.0) (2021-07-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* add condProp and utilise it within mapProp + normalise usage and documentation
+
+### Features
+
+* add condProp and utilise it within mapProp + normalise usage and documentation ([bdc0092](https://github.com/growthops-digital/ext-ramda/commit/bdc0092b61e2ad0d11fed5ec503b7da4b5972a4a))
+
 ## [1.6.0](https://github.com/growthops-digital/ext-ramda/compare/v1.5.1...v1.6.0) (2021-07-15)
 
 
