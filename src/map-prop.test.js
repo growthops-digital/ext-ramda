@@ -39,12 +39,10 @@ test('correct content is returned for all matching types', () => {
 		},
 	];
 
-	const process = mapProp('type', always(null), {
+	const result = mapProp('type', always(null), {
 		foo: prop('contentFoo'),
 		baz: prop('contentBaz'),
-	});
-
-	const result = process(input);
+	})(input);
 
 	expect(result).toStrictEqual(['bar', 'qux']);
 });

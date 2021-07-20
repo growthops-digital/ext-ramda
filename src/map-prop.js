@@ -1,15 +1,6 @@
-import {
-	pipe, map, propEq, toPairs, append, T, cond, curry,
-} from 'ramda';
+import {map, pipe} from 'ramda';
+import condProp from './cond-prop.js';
 
-const createPredicateTransformerPair = prop => ([value, transformer]) => [propEq(prop, value), transformer];
-
-const mapProp = curry((prop, fallback, branches, data) => pipe(
-	toPairs,
-	map(createPredicateTransformerPair(prop)),
-	append([T, fallback]),
-	cond,
-	map,
-)(branches)(data));
+const mapProp = pipe(condProp, map);
 
 export default mapProp;

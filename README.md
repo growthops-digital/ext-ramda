@@ -119,9 +119,41 @@ reform({
 // }
 ```
 
-### `mapProp(prop, fallback, branches, data)`
+### `condProp(prop, fallback, branches) -> fn(data)`
 
-Map over a list of objects, choosing a specific transforming function based on whether the object contains a `prop` that matches one of the keys supplied in the `branches` object. If no match is found, the `fallback` transformer is used.
+Creates a new function that will process an object, selecting a specific transformer function based on whether the object contains a `prop` that matches one of the keys supplied in the `branches` object. If no match is found, the `fallback` transformer is used.
+
+**Example**
+
+```js
+import {condProp} from '@growthops/ext-ramda';
+import {always} from 'ramda';
+
+const data = {type: 'text', content: 'Foo'};
+
+const renderTextBlock = ({content}) => <p>{content}</p>;
+
+const renderBlock = condProp('type', always(null), {
+	text: renderTextBlock,
+});
+
+const Page = () => (
+	<main>
+		{renderBlock(data)}
+	</main>
+);
+
+// Rendered:
+// <main>
+// 	<p>Foo</p>
+// </main>
+```
+
+### `mapProp(prop, fallback, branches) -> fn([data])`
+
+**This is an extension of `condProp` which will support a list of objects instead of a single object**
+
+Creates a new function that will process a list of objects, selecting a specific transformer function based on whether each object contains a `prop` that matches one of the keys supplied in the `branches` object. If no match is found, the `fallback` transformer is used.
 
 **Example**
 
@@ -132,7 +164,6 @@ import {always} from 'ramda';
 const blocks = [
 	{type: 'text', content: 'Foo'},
 	{type: 'image', url: 'https://example.com/foo.jpg', alt: 'bar'},
-	{type: 'unknown'},
 ];
 
 const renderTextBlock = ({content}) => <p>{content}</p>;
@@ -153,6 +184,5 @@ const Page = () => (
 // <main>
 // 	<p>Foo</p>
 // 	<img src="https://example.com/foo.jpg" alt="bar"/>
-//	// <-- The unknown block is not rendered here as the fallback transformer returned null.
 // </main>
 ```
