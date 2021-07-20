@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/growthops-digital/ext-ramda/compare/v2.0.0...v2.0.1) (2021-07-20)
+
+
+### Bug Fixes
+
+* add missing condProp function to list of exports ([4cc45eb](https://github.com/growthops-digital/ext-ramda/commit/4cc45eb7f0362f960f2745356d3de3ae76e79ea2))
+
 ## [2.0.0](https://github.com/growthops-digital/ext-ramda/compare/v1.6.0...v2.0.0) (2021-07-20)
 
 
