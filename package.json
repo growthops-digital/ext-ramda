@@ -1,6 +1,6 @@
 {
 	"name": "@growthops/ext-ramda",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "Ramda library for the GO Digital modern stack",
 	"main": "./lib/index.js",
 	"license": "MIT",
