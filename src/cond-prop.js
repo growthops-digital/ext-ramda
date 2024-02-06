@@ -2,7 +2,7 @@ import {
 	pipe, map, propEq, toPairs, append, T, cond, curry,
 } from 'ramda';
 
-const createPredicateTransformerPair = prop => ([value, transformer]) => [propEq(prop, value), transformer];
+const createPredicateTransformerPair = prop => ([value, transformer]) => [propEq(value, prop), transformer];
 
 const condProp = curry((prop, fallback, branches) => pipe(
 	toPairs,
