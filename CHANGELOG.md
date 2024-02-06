@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.4](https://github.com/growthops-digital/ext-ramda/compare/v2.0.3...v2.0.4) (2024-02-06)
+
+
+### Bug Fixes
+
+* fix the cond-prop function ([de1b8ba](https://github.com/growthops-digital/ext-ramda/commit/de1b8ba9741e206aa0018572e09cfc44062502b3))
+
 ### [2.0.3](https://github.com/growthops-digital/ext-ramda/compare/v2.0.2...v2.0.3) (2024-02-06)
 
 ### [2.0.2](https://github.com/growthops-digital/ext-ramda/compare/v2.0.1...v2.0.2) (2024-02-06)
